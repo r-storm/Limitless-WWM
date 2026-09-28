@@ -1,0 +1,192 @@
+export const games = [
+  { gameNum: 71, result: 'win', type: 'league', group: 'Jesting God', date: '2026/04/25 12:40', opponent: 'WarKitties', points_after: 80, points_gained: 40, our_fortune_tree_m: 469, enemy_fortune_tree_m: 0, our_guardian_goose_hp_pct: 100, enemy_guardian_goose_hp_pct: 0, our_bulwark_remaining: 3, enemy_bulwark_remaining: 0, our_kills: 17, enemy_kills: 0, our_fun_coins: 19238, enemy_fun_coins: 2520 },
+  { gameNum: 72, result: 'win', type: 'ranked', date: '2026/04/25 13:04', opponent: 'Ethernal', points_after: 635, points_gained: 40, our_fortune_tree_m: 464, enemy_fortune_tree_m: 148, our_guardian_goose_hp_pct: 0, enemy_guardian_goose_hp_pct: 0, our_bulwark_remaining: 0, enemy_bulwark_remaining: 0, our_kills: 202, enemy_kills: 50, our_fun_coins: 15184, enemy_fun_coins: 17798 },
+  { gameNum: 73, result: 'loss', type: 'ranked', date: '2026/04/25 13:24', opponent: 'Han’nya', points_after: 620, points_gained: 15, our_fortune_tree_m: 0, enemy_fortune_tree_m: 468, our_guardian_goose_hp_pct: 0, enemy_guardian_goose_hp_pct: 7, our_bulwark_remaining: 0, enemy_bulwark_remaining: 0, our_kills: 9, enemy_kills: 157, our_fun_coins: 6080, enemy_fun_coins: 21556 },
+  { gameNum: 74, result: 'loss', type: 'ranked', date: '2026/04/25 13:51', opponent: 'SwordOfAsura', points_after: 605, points_gained: 15, our_fortune_tree_m: 422, enemy_fortune_tree_m: 471, our_guardian_goose_hp_pct: 0, enemy_guardian_goose_hp_pct: 0, our_bulwark_remaining: 0, enemy_bulwark_remaining: 0, our_kills: 125, enemy_kills: 139, our_fun_coins: 25616, enemy_fun_coins: 15778 },
+];
+
+export const players = {
+  "Reinoch": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 5, assist: 6, deaths: 0, fun_coin: 0, damage: 211824, tank: 52081, heal: 0, siege_damage: 1673274 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 13, assist: 114, deaths: 0, fun_coin: 0, damage: 3820182, tank: 2622286, heal: 0, siege_damage: 731697 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 2, assist: 3, deaths: 1, fun_coin: 792, damage: 1516510, tank: 1911371, heal: 0, siege_damage: 1040590 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 11, assist: 75, deaths: 2, fun_coin: 264, damage: 3806821, tank: 1542717, heal: 0, siege_damage: 845514 },
+  ],
+  "Diabolical-": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 2, assist: 6, deaths: 0, fun_coin: 1320, damage: 297658, tank: 49870, heal: 0, siege_damage: 957179 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 20, assist: 114, deaths: 0, fun_coin: 3168, damage: 4409308, tank: 1828234, heal: 0, siege_damage: 1285210 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 2, assist: 5, deaths: 4, fun_coin: 1056, damage: 2088185, tank: 1583728, heal: 0, siege_damage: 2362253 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 6, assist: 37, deaths: 4, fun_coin: 792, damage: 4496307, tank: 3120207, heal: 2051, siege_damage: 480440 },
+  ],
+  "LorienBlade": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 2, assist: 5, deaths: 0, fun_coin: 0, damage: 87390, tank: 31454, heal: 0, siege_damage: 860268 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 14, assist: 66, deaths: 1, fun_coin: 1584, damage: 2175148, tank: 2180513, heal: 0, siege_damage: 1516070 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 4, deaths: 5, fun_coin: 528, damage: 1298139, tank: 2183921, heal: 0, siege_damage: 940448 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 2, assist: 25, deaths: 4, fun_coin: 1320, damage: 1755340, tank: 2285582, heal: 0, siege_damage: 1423668 },
+  ],
+  "Splyced": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 1, assist: 3, deaths: 0, fun_coin: 264, damage: 202173, tank: 81507, heal: 0, siege_damage: 711929 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 15, assist: 113, deaths: 0, fun_coin: 0, damage: 3920484, tank: 1767730, heal: 0, siege_damage: 1212302 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 1, assist: 3, deaths: 3, fun_coin: 0, damage: 3203570, tank: 3169373, heal: 0, siege_damage: 750196 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 5, assist: 43, deaths: 2, fun_coin: 1848, damage: 3276584, tank: 1872206, heal: 0, siege_damage: 1218854 },
+  ],
+  "FullmetalFork": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 1, assist: 2, deaths: 0, fun_coin: 5808, damage: 197663, tank: 16546, heal: 0, siege_damage: 535737 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 10, assist: 83, deaths: 0, fun_coin: 792, damage: 2936772, tank: 1489214, heal: 0, siege_damage: 1233559 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 5, deaths: 0, fun_coin: 0, damage: 1472267, tank: 834265, heal: 0, siege_damage: 2385733 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 6, assist: 20, deaths: 0, fun_coin: 1848, damage: 2390609, tank: 945569, heal: 0, siege_damage: 1229171 },
+  ],
+  "Autumntea": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 1, assist: 7, deaths: 0, fun_coin: 1320, damage: 201473, tank: 34784, heal: 0, siege_damage: 828159 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 19, assist: 129, deaths: 2, fun_coin: 0, damage: 3770423, tank: 2883607, heal: 0, siege_damage: 592066 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 4, deaths: 3, fun_coin: 0, damage: 2364992, tank: 2925510, heal: 0, siege_damage: 1576391 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 9, assist: 74, deaths: 1, fun_coin: 0, damage: 4934469, tank: 3016325, heal: 0, siege_damage: 1261095 },
+  ],
+  "RØYAL": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 1, assist: 1, deaths: 0, fun_coin: 0, damage: 32825, tank: 0, heal: 0, siege_damage: 905868 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 8, assist: 94, deaths: 1, fun_coin: 0, damage: 2538881, tank: 2330393, heal: 0, siege_damage: 1021780 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 5, deaths: 5, fun_coin: 0, damage: 891424, tank: 2233568, heal: 0, siege_damage: 212210 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 9, assist: 55, deaths: 0, fun_coin: 0, damage: 2718062, tank: 1860906, heal: 1897, siege_damage: 1187072 },
+  ],
+  "bbeast": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 1, assist: 8, deaths: 0, fun_coin: 1320, damage: 675773, tank: 63160, heal: 0, siege_damage: 0 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 5, assist: 40, deaths: 5, fun_coin: 1848, damage: 6141892, tank: 5566932, heal: 0, siege_damage: 0 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 0, deaths: 6, fun_coin: 1848, damage: 2028517, tank: 2092515, heal: 0, siege_damage: 0 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 4, assist: 16, deaths: 6, fun_coin: 3960, damage: 4174537, tank: 3490267, heal: 30426, siege_damage: 0 },
+  ],
+  "Tuesday—Night": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 1, assist: 6, deaths: 0, fun_coin: 0, damage: 356124, tank: 60159, heal: 0, siege_damage: 78230 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 2, assist: 47, deaths: 1, fun_coin: 0, damage: 4508973, tank: 4833431, heal: 0, siege_damage: 0 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 2, deaths: 7, fun_coin: 0, damage: 1213000, tank: 3146624, heal: 0, siege_damage: 0 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 1, assist: 17, deaths: 11, fun_coin: 0, damage: 2570812, tank: 6211648, heal: 0, siege_damage: 0 },
+  ],
+  "TheFinalUchiha": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 1, assist: 4, deaths: 0, fun_coin: 1584, damage: 238824, tank: 17386, heal: 0, siege_damage: 345780 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 13, assist: 95, deaths: 0, fun_coin: 2904, damage: 3548345, tank: 1972070, heal: 0, siege_damage: 1639030 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 4, deaths: 6, fun_coin: 792, damage: 900422, tank: 2203880, heal: 0, siege_damage: 797296 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 6, assist: 37, deaths: 6, fun_coin: 2376, damage: 2573530, tank: 2878455, heal: 0, siege_damage: 368515 },
+  ],
+  "BaeYuekui": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 1, assist: 3, deaths: 0, fun_coin: 0, damage: 195029, tank: 139902, heal: 181362, siege_damage: 0 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 1, assist: 40, deaths: 3, fun_coin: 0, damage: 2592386, tank: 5375484, heal: 15514343, siege_damage: 0 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 4, deaths: 10, fun_coin: 0, damage: 989731, tank: 3002419, heal: 6012215, siege_damage: 0 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 0, assist: 15, deaths: 12, fun_coin: 0, damage: 2011638, tank: 6889859, heal: 13098946, siege_damage: 0 },
+  ],
+  "Sudavilla": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 4, deaths: 0, fun_coin: 0, damage: 40540, tank: 4651, heal: 0, siege_damage: 918102 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 6, assist: 125, deaths: 0, fun_coin: 264, damage: 2956532, tank: 1511776, heal: 0, siege_damage: 761007 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 1, assist: 4, deaths: 4, fun_coin: 0, damage: 1368744, tank: 1679662, heal: 0, siege_damage: 1066626 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 8, assist: 77, deaths: 1, fun_coin: 0, damage: 2929127, tank: 1613383, heal: 0, siege_damage: 1063938 },
+  ],
+  "MightyHive": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 2, deaths: 0, fun_coin: 0, damage: 45028, tank: 13691, heal: 0, siege_damage: 1307330 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 9, assist: 77, deaths: 4, fun_coin: 0, damage: 2941937, tank: 3097577, heal: 0, siege_damage: 1102760 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 4, deaths: 5, fun_coin: 0, damage: 851648, tank: 2934774, heal: 0, siege_damage: 617482 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 4, assist: 41, deaths: 4, fun_coin: 0, damage: 2536344, tank: 3076747, heal: 28424, siege_damage: 411034 },
+  ],
+  "Enyyo": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 10, deaths: 0, fun_coin: 264, damage: 124579, tank: 14548, heal: 296665, siege_damage: 311127 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 3, assist: 56, deaths: 0, fun_coin: 264, damage: 712700, tank: 1788864, heal: 5543156, siege_damage: 387039 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 0, deaths: 1, fun_coin: 0, damage: 196861, tank: 1531983, heal: 7351056, siege_damage: 273018 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 0, assist: 13, deaths: 3, fun_coin: 3960, damage: 217759, tank: 3132438, heal: 7229669, siege_damage: 606221 },
+  ],
+  "StormFengbao": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 1, deaths: 0, fun_coin: 0, damage: 7107, tank: 4555, heal: 0, siege_damage: 576537 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 0, assist: 13, deaths: 2, fun_coin: 0, damage: 286152, tank: 3786026, heal: 0, siege_damage: 1238143 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 4, deaths: 6, fun_coin: 0, damage: 717457, tank: 2874788, heal: 0, siege_damage: 717956 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 3, assist: 25, deaths: 3, fun_coin: 0, damage: 723765, tank: 4442760, heal: 0, siege_damage: 747927 },
+  ],
+  "Azeltan": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 6, deaths: 0, fun_coin: 264, damage: 194892, tank: 1767, heal: 0, siege_damage: 1554285 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 16, assist: 135, deaths: 1, fun_coin: 0, damage: 4311106, tank: 1646618, heal: 0, siege_damage: 1134515 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 4, deaths: 5, fun_coin: 0, damage: 1747844, tank: 2747506, heal: 721, siege_damage: 1014214 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 3, assist: 80, deaths: 1, fun_coin: 0, damage: 4044000, tank: 2397252, heal: 0, siege_damage: 1083116 },
+  ],
+  "EVØ": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 1, deaths: 0, fun_coin: 230, damage: 37824, tank: 47, heal: 0, siege_damage: 793526 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 1, assist: 33, deaths: 8, fun_coin: 460, damage: 4622827, tank: 7224747, heal: 0, siege_damage: 100294 },
+  ],
+  "LadyDEAD": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 2, deaths: 0, fun_coin: 0, damage: 78964, tank: 46783, heal: 182428, siege_damage: 0 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 0, assist: 21, deaths: 2, fun_coin: 0, damage: 2171754, tank: 4652410, heal: 13308908, siege_damage: 0 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 1, deaths: 9, fun_coin: 0, damage: 716212, tank: 3548379, heal: 5428731, siege_damage: 0 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 1, assist: 15, deaths: 8, fun_coin: 0, damage: 1615805, tank: 6737675, heal: 10537755, siege_damage: 0 },
+  ],
+  "Kāi": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 8, deaths: 0, fun_coin: 0, damage: 308898, tank: 39542, heal: 0, siege_damage: 1156806 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 19, assist: 109, deaths: 2, fun_coin: 1100, damage: 6056008, tank: 2869608, heal: 0, siege_damage: 1029223 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 3, deaths: 6, fun_coin: 0, damage: 2315704, tank: 2062520, heal: 1911, siege_damage: 315093 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 18, assist: 67, deaths: 1, fun_coin: 0, damage: 6767696, tank: 2237630, heal: 0, siege_damage: 1844827 },
+  ],
+  "Kayöko": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 4, deaths: 0, fun_coin: 0, damage: 77214, tank: 20568, heal: 99620, siege_damage: 503892 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 0, assist: 59, deaths: 1, fun_coin: 0, damage: 554143, tank: 2417864, heal: 7979336, siege_damage: 94849 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 2, deaths: 1, fun_coin: 0, damage: 254135, tank: 3727781, heal: 9275970, siege_damage: 56551 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 1, assist: 57, deaths: 2, fun_coin: 0, damage: 1246827, tank: 2605944, heal: 8925795, siege_damage: 213874 },
+  ],
+  "AsterBlaze": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 2, deaths: 0, fun_coin: 0, damage: 136112, tank: 51394, heal: 0, siege_damage: 0 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 8, assist: 48, deaths: 1, fun_coin: 0, damage: 6583509, tank: 3639265, heal: 0, siege_damage: 0 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 1, assist: 1, deaths: 8, fun_coin: 0, damage: 1854394, tank: 2793183, heal: 0, siege_damage: 0 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 1, assist: 18, deaths: 12, fun_coin: 0, damage: 2412521, tank: 5188709, heal: 29769, siege_damage: 0 },
+  ],
+  "Tèmpést": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 5, deaths: 0, fun_coin: 0, damage: 264326, tank: 78488, heal: 0, siege_damage: 1201454 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 9, assist: 40, deaths: 3, fun_coin: 0, damage: 5895460, tank: 7799606, heal: 4248, siege_damage: 0 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 2, deaths: 9, fun_coin: 0, damage: 2824559, tank: 3993754, heal: 0, siege_damage: 0 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 2, assist: 18, deaths: 12, fun_coin: 0, damage: 4183335, tank: 5064896, heal: 1643, siege_damage: 0 },
+  ],
+  "AcidDeath": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 3, deaths: 0, fun_coin: 0, damage: 89659, tank: 139351, heal: 0, siege_damage: 0 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 1, assist: 33, deaths: 6, fun_coin: 0, damage: 3527951, tank: 6390724, heal: 0, siege_damage: 145782 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 1, deaths: 7, fun_coin: 0, damage: 666715, tank: 2327541, heal: 13982, siege_damage: 35431 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 2, assist: 25, deaths: 5, fun_coin: 0, damage: 1165172, tank: 1631482, heal: 14935, siege_damage: 230662 },
+  ],
+  "Rensune": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 6, deaths: 0, fun_coin: 0, damage: 143324, tank: 38168, heal: 676857, siege_damage: 262583 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 1, assist: 87, deaths: 0, fun_coin: 0, damage: 1021640, tank: 1756753, heal: 13595826, siege_damage: 255074 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 3, deaths: 2, fun_coin: 0, damage: 289982, tank: 1619968, heal: 9301888, siege_damage: 64459 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 1, assist: 59, deaths: 0, fun_coin: 0, damage: 1072251, tank: 1476036, heal: 12362204, siege_damage: 314677 },
+  ],
+  "Xania": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 1, deaths: 0, fun_coin: 0, damage: 77592, tank: 9357, heal: 838032, siege_damage: 122434 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 2, assist: 51, deaths: 0, fun_coin: 0, damage: 558911, tank: 2124135, heal: 8452709, siege_damage: 245121 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 3, deaths: 2, fun_coin: 0, damage: 439199, tank: 4054359, heal: 9863408, siege_damage: 140327 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 0, assist: 40, deaths: 2, fun_coin: 0, damage: 770632, tank: 2168431, heal: 11211159, siege_damage: 330213 },
+  ],
+  "WisteriaMoon": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 7, deaths: 0, fun_coin: 0, damage: 69903, tank: 29955, heal: 614757, siege_damage: 0 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 1, assist: 42, deaths: 0, fun_coin: 0, damage: 4307576, tank: 4667862, heal: 17057829, siege_damage: 0 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 1, assist: 1, deaths: 9, fun_coin: 0, damage: 938643, tank: 3368553, heal: 6755013, siege_damage: 0 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 2, assist: 14, deaths: 9, fun_coin: 0, damage: 1956318, tank: 6172520, heal: 12432531, siege_damage: 0 },
+  ],
+  "Æthereal": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 2, deaths: 0, fun_coin: 0, damage: 13591, tank: 3863, heal: 119577, siege_damage: 0 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 0, assist: 18, deaths: 0, fun_coin: 0, damage: 81865, tank: 2720461, heal: 7364422, siege_damage: 625 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 0, deaths: 2, fun_coin: 0, damage: 64124, tank: 2661236, heal: 5113018, siege_damage: 0 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 0, assist: 2, deaths: 2, fun_coin: 0, damage: 72156, tank: 4132774, heal: 10595107, siege_damage: 0 },
+  ],
+  "General-Hei": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 4, deaths: 0, fun_coin: 264, damage: 249068, tank: 197693, heal: 0, siege_damage: 0 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 2, assist: 47, deaths: 1, fun_coin: 0, damage: 4194139, tank: 5760862, heal: 0, siege_damage: 0 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 2, deaths: 9, fun_coin: 0, damage: 1192928, tank: 3609389, heal: 0, siege_damage: 0 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 0, assist: 16, deaths: 6, fun_coin: 0, damage: 1970063, tank: 4986788, heal: 0, siege_damage: 0 },
+  ],
+  "hazy": [
+    { game_num: 71, date: "2026/04/25 12:40", result: "win", defeated: 0, assist: 1, deaths: 0, fun_coin: 0, damage: 871, tank: 10448, heal: 204517, siege_damage: 0 },
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 1, assist: 13, deaths: 2, fun_coin: 0, damage: 593145, tank: 4764932, heal: 14792598, siege_damage: 0 },
+  ],
+  "CyrillaUna": [
+    { game_num: 72, date: "2026/04/25 13:04", result: "win", defeated: 3, assist: 15, deaths: 4, fun_coin: 0, damage: 2925357, tank: 4586203, heal: 5553, siege_damage: 0 },
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 1, deaths: 7, fun_coin: 0, damage: 588191, tank: 2488528, heal: 15649, siege_damage: 0 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 0, assist: 5, deaths: 8, fun_coin: 0, damage: 706809, tank: 3128476, heal: 0, siege_damage: 0 },
+  ],
+  "Malfuras": [
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 1, assist: 3, deaths: 6, fun_coin: 0, damage: 3013701, tank: 2220665, heal: 2325, siege_damage: 609741 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 20, assist: 67, deaths: 1, fun_coin: 1320, damage: 7922354, tank: 2266422, heal: 0, siege_damage: 1017058 },
+  ],
+  "KnightRiku": [
+    { game_num: 73, date: "2026/04/25 13:24", result: "loss", defeated: 0, assist: 0, deaths: 10, fun_coin: 264, damage: 562928, tank: 2649773, heal: 34396, siege_damage: 331894 },
+    { game_num: 74, date: "2026/04/25 13:51", result: "loss", defeated: 0, assist: 26, deaths: 12, fun_coin: 528, damage: 2917346, tank: 3597880, heal: 27328, siege_damage: 0 },
+  ],
+};

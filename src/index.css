@@ -1,0 +1,542 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ── */
+:root {
+  /* Cool deep-slate palette — aligned with dossier-* tokens */
+  --color-bg-base: #06080A;
+  --color-bg-surface: #0B0F14;
+  --color-bg-card: #11161D;
+  --color-bg-elevated: #1B232E;
+  --color-bg-card-hover: #1B232E;
+
+  --color-text-primary: #E6EBF2;
+  --color-text-secondary: #97A1AD;
+  --color-text-muted: #5C6571;
+
+  --color-accent-blue: #38BDF8;
+  --color-accent-violet: #22D3EE;       /* repointed: primary accent is now cyan */
+  --color-accent-purple: #7DD3FC;       /* repointed: lighter sky */
+  --color-accent-amber: #22D3EE;        /* repointed for legacy usage */
+  --color-accent-red: #F87171;
+  --color-accent-green: #4ADE80;
+
+  --color-border: #1B232E;
+
+  --glow-violet: 0 0 6px rgba(34, 211, 238, 0.10);
+  --glow-blue: 0 0 6px rgba(56, 189, 248, 0.10);
+  --glow-purple: 0 0 6px rgba(125, 211, 252, 0.10);
+  --glow-amber: 0 0 6px rgba(34, 211, 238, 0.10);
+  --glow-red: 0 0 6px rgba(248, 113, 113, 0.10);
+  --glow-green: 0 0 6px rgba(74, 222, 128, 0.10);
+  --glow-cyan: 0 0 6px rgba(34, 211, 238, 0.10);
+  --glow-teal: 0 0 6px rgba(45, 212, 191, 0.10);
+}
+
+/* ── Glass Utility Classes ── */
+.glass-adaptive {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(18, 18, 24, 0.7);
+}
+
+.glass-adaptive-hover {
+  transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-adaptive-hover:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(139, 92, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+.glass-strong {
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  background-color: rgba(10, 10, 15, 0.85);
+}
+
+.glass-floating {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-adaptive,
+  .glass-strong,
+  .glass-floating {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .glass-adaptive {
+    background-color: rgba(18, 18, 24, 0.95);
+  }
+  .glass-strong {
+    background-color: rgba(10, 10, 15, 0.95);
+  }
+  .glass-floating {
+    background-color: rgba(5, 5, 7, 0.95);
+  }
+  .glass-adaptive-hover:hover {
+    transform: none;
+  }
+  .podium-shimmer-gold::before,
+  .podium-shimmer-silver::before,
+  .podium-shimmer-bronze::before {
+    animation: none;
+  }
+  .podium-glow-gold {
+    animation: none;
+  }
+  .animate-fade-in {
+    animation: none;
+  }
+  .animate-hero-title-in,
+  .animate-hero-subtitle-in,
+  .animate-hero-button-in,
+  .animate-hero-exit,
+  .animate-dashboard-enter {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1E1E2A transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Podium Animations ── */
+@keyframes border-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes podium-glow-pulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(251, 191, 36, 0.15), 0 0 30px rgba(251, 191, 36, 0.08); }
+  50% { box-shadow: 0 0 25px rgba(251, 191, 36, 0.3), 0 0 50px rgba(251, 191, 36, 0.15); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.podium-shimmer-gold::before,
+.podium-shimmer-silver::before,
+.podium-shimmer-bronze::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.podium-shimmer-gold::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 65%,
+    rgba(251, 191, 36, 0.5) 73%,
+    rgba(251, 191, 36, 0.8) 76%,
+    rgba(251, 191, 36, 0.5) 79%,
+    transparent 87%,
+    transparent 100%
+  );
+  animation: border-rotate 8s linear infinite;
+}
+
+.podium-shimmer-silver::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 65%,
+    rgba(148, 163, 184, 0.3) 73%,
+    rgba(148, 163, 184, 0.5) 76%,
+    rgba(148, 163, 184, 0.3) 79%,
+    transparent 87%,
+    transparent 100%
+  );
+  animation: border-rotate 10s linear infinite;
+}
+
+.podium-shimmer-bronze::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 65%,
+    rgba(251, 146, 60, 0.3) 73%,
+    rgba(251, 146, 60, 0.5) 76%,
+    rgba(251, 146, 60, 0.3) 79%,
+    transparent 87%,
+    transparent 100%
+  );
+  animation: border-rotate 11s linear infinite;
+}
+
+.podium-glow-gold {
+  animation: podium-glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out both;
+}
+
+/* ── Hero Page Animations ── */
+@keyframes hero-title-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes hero-subtitle-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-button-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-exit {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.05);
+    filter: blur(8px);
+  }
+}
+
+@keyframes dashboard-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-title {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--dossier-bone);
+  text-shadow:
+    0 0 24px rgba(34, 211, 238, 0.35),
+    0 0 60px rgba(14, 165, 233, 0.20);
+}
+
+.animate-hero-title-in {
+  animation: hero-title-enter 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-hero-subtitle-in {
+  opacity: 0;
+  animation: hero-subtitle-enter 0.6s ease-out 0.5s both;
+}
+
+.animate-hero-button-in {
+  opacity: 0;
+  animation: hero-button-enter 0.6s ease-out 0.9s both;
+}
+
+.animate-hero-exit {
+  animation: hero-exit 0.8s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+.animate-dashboard-enter {
+  animation: dashboard-enter 0.6s ease-out both;
+}
+
+/* ─────────────────────────────────────────────
+   TACTICAL WAR DOSSIER — Dashboard aesthetics
+   ───────────────────────────────────────────── */
+
+:root {
+  /* Cool deep-slate command-center palette */
+  --dossier-bone: #E6EBF2;          /* near-white text */
+  --dossier-bone-soft: #97A1AD;     /* secondary text */
+  --dossier-bone-muted: #5C6571;    /* muted labels */
+  --dossier-amber: #22D3EE;         /* primary accent (cyan) */
+  --dossier-amber-soft: #0EA5E9;    /* deeper cyan */
+  --dossier-sulfur: #7DD3FC;        /* lighter sky highlight */
+  --dossier-oxblood: #DC2626;       /* deep crimson — losses */
+  --dossier-crimson: #F87171;       /* light crimson */
+  --dossier-sage: #4ADE80;          /* emerald — wins */
+  --dossier-emerald-deep: #22C55E;
+  --dossier-ink: #06080A;           /* pure deep slate */
+  --dossier-ink-2: #0B0F14;
+  --dossier-ink-3: #11161D;
+  --dossier-line: #1B232E;          /* cool slate divider */
+  --dossier-line-bright: #2E3845;
+}
+
+/* All dashboard text uses Inter — weight/size for hierarchy, not different families */
+.font-display { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 800; letter-spacing: -0.025em; font-feature-settings: 'tnum' 1, 'ss01' 1; }
+.font-mono-tac { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-feature-settings: 'tnum' 1; }
+.font-ui { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+
+/* Pulse dot for live status indicator */
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--dossier-sage); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(111, 174, 107, 0); }
+}
+.status-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--dossier-sage);
+  animation: status-pulse 2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .status-dot { animation: none; }
+}
+
+/* Cleaner panel surface for ops cards */
+.ops-panel {
+  background: linear-gradient(180deg, rgba(20, 17, 11, 0.7) 0%, rgba(15, 13, 9, 0.85) 100%);
+  border: 1px solid var(--dossier-line);
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+.ops-panel:hover {
+  border-color: var(--dossier-line-bright);
+}
+
+/* Tabular badges */
+.ops-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--dossier-line-bright);
+  border-radius: 4px;
+  color: var(--dossier-bone-soft);
+  background: rgba(11, 15, 20, 0.7);
+}
+
+/* Paper grain — subtle, applied via ::before so children stay sharp */
+.dossier-grain {
+  position: relative;
+  isolation: isolate;
+}
+.dossier-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.85 0 0 0 0 0.9 0 0 0 0 0.95 0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+.dossier-grain > * { position: relative; z-index: 1; }
+
+/* Subtle cool ambient backdrop for the page surface */
+.dossier-topo {
+  background-image:
+    radial-gradient(ellipse at 18% 0%, rgba(34, 211, 238, 0.05), transparent 55%),
+    radial-gradient(ellipse at 92% 100%, rgba(14, 165, 233, 0.04), transparent 55%),
+    repeating-linear-gradient(135deg, rgba(46, 56, 69, 0.04) 0 1px, transparent 1px 8px);
+}
+
+/* Corner-bracket frame — tactical dossier panel */
+.tac-frame {
+  position: relative;
+  background: linear-gradient(180deg, rgba(20, 17, 11, 0.86) 0%, rgba(10, 9, 7, 0.92) 100%);
+  border: 1px solid var(--dossier-line);
+  box-shadow: 0 1px 0 rgba(228, 165, 55, 0.04) inset, 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+.tac-frame::before,
+.tac-frame::after,
+.tac-frame > .tac-corner-bl,
+.tac-frame > .tac-corner-br {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--dossier-amber);
+  pointer-events: none;
+}
+.tac-frame::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--dossier-amber);
+  border-left: 2px solid var(--dossier-amber);
+}
+.tac-frame::after {
+  top: -1px;
+  right: -1px;
+  border-top: 2px solid var(--dossier-amber);
+  border-right: 2px solid var(--dossier-amber);
+}
+.tac-frame > .tac-corner-bl {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 2px solid var(--dossier-amber);
+  border-left: 2px solid var(--dossier-amber);
+}
+.tac-frame > .tac-corner-br {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--dossier-amber);
+  border-right: 2px solid var(--dossier-amber);
+}
+
+/* Section eyebrow — small uppercase tag, low tracking */
+.tac-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dossier-amber);
+  font-feature-settings: 'tnum' 1;
+}
+.tac-eyebrow::before {
+  content: '';
+  width: 14px;
+  height: 1px;
+  background: var(--dossier-amber);
+  opacity: 0.7;
+}
+
+/* Classification stamp */
+.tac-stamp {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid currentColor;
+  color: var(--dossier-oxblood);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.tac-stamp::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* Hairline divider with index marks */
+.tac-rule {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dossier-line-bright) 8%, var(--dossier-line-bright) 92%, transparent);
+}
+.tac-rule-double {
+  position: relative;
+  height: 4px;
+  border-top: 1px solid var(--dossier-line-bright);
+  border-bottom: 1px solid var(--dossier-line-bright);
+}
+
+/* Conic ring gauge for win-rate */
+@keyframes ring-reveal {
+  from { stroke-dashoffset: var(--ring-full); }
+  to { stroke-dashoffset: var(--ring-target); }
+}
+.tac-ring-anim {
+  animation: ring-reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Numerical counter feel */
+.tac-numeral {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Win-loss bar */
+.tac-bar {
+  position: relative;
+  height: 22px;
+  background: rgba(20, 17, 11, 0.7);
+  border: 1px solid var(--dossier-line);
+  overflow: hidden;
+}
+.tac-bar-fill {
+  height: 100%;
+  position: relative;
+}
+.tac-bar-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(45deg,
+    transparent 0 4px,
+    rgba(255,255,255,0.06) 4px 8px);
+}
+
+/* Subtle entrance — staggered */
+@keyframes dossier-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.dossier-rise { animation: dossier-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.dossier-rise-1 { animation-delay: 0.05s; }
+.dossier-rise-2 { animation-delay: 0.15s; }
+.dossier-rise-3 { animation-delay: 0.25s; }
+.dossier-rise-4 { animation-delay: 0.35s; }
+.dossier-rise-5 { animation-delay: 0.45s; }
+.dossier-rise-6 { animation-delay: 0.55s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .dossier-rise,
+  .tac-ring-anim { animation: none; opacity: 1; }
+}
